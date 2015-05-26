@@ -9,53 +9,49 @@
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'>
 
         <style>
-            html body {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-            }
-            .background {
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                vertical-align: middle;
-                background-color: #cc0000;
-            }
-
-            #answer {
-                color: black;
-                font-family: 'Lato', Helvetiva, Arial, sans-serif;
-                text-align: center;
-                font-size: 5.5em;
-                display: block;
-                min-width: 200px;
-                color: #ffcc66;
-            }
-
-            #question, #tweet {
-                text-decoration: none;
+            html, body {
+              margin: 0;
+              padding: 0;
+              height: 100%;
+              width: 100%;
+              color: #ffcc66;
+              background-color: #cc0000;
+              font-family: 'Lato', Helvetiva, Arial, sans-serif;
             }
 
             .centered {
-                margin: auto;
-                position: absolute;
-                top: 65px;
-                text-align: center;
-                width: 100%;
+              margin: auto;
+              position: absolute;
+              top: 65px;
+              text-align: center;
+              width: 100%;
+            }
+
+            .page-wrap {
+              min-height: 100%;
+              margin-bottom: -35px; 
+            }
+
+            .page-wrap:after {
+              content: "";
+              display: block;
+            }
+            
+            .site-footer, .page-wrap:after {
+              height: 35px; 
+              text-align: right;
+              margin-right: 10px;
+            }
+
+            #answer {
+              text-align: center;
+              font-size: 5.5em;
+              display: block;
+              min-width: 200px;  
             }
 
             #description {
-                font-size: 3em;
-                font-family: 'Lato', Helvetiva, Arial, sans-serif;
-                color: #ffcc66;
-            }
-
-            #footer {
-                position: absolute;
-                right: 0;
-                top: 97%;
-                padding-right: 10px;
+              font-size: 3em;
             }
 
             a.twitter-share-button,
@@ -86,22 +82,22 @@
             a.twitter-hashtag-button:focus {
               outline: none;
               border-color: #0089cb;
-            }
+            } 
 
         </style>
     </head>
     <body>
-        <div class="background">
-            <div class="centered">
+        <div class="page-wrap">
+          <div class="centered">
                 <p id="description">Has Hoiberg left?</p>
                 <p id="answer">Not yet.</p>
                 <p id="description">Still no word on if he is leaving.</p>
             </div>
-            <div id="footer">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-text="Has Hoiberg Left?  Not yet." data-via="davis_m" data-size="large">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </div>
         </div>
+        <footer class="site-footer">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Has Hoiberg Left?  Not yet." data-via="davis_m" data-size="large">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  
+        </footer>
     </body>
 </html>
 
