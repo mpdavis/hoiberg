@@ -54,6 +54,11 @@
               font-size: 3em;
             }
 
+            #description-rumble{
+              font-size: 3em;
+              width: 99%;
+            }
+
             a.twitter-share-button,
             a.twitter-mention-button,
             a.twitter-hashtag-button {
@@ -93,8 +98,8 @@
           <div>
             <button type="button" id="rumble-toggle" onclick="rumbleToggle()">Stop Rumble</button>
           </div>
-          <div class="centered" id="rumble-element">
-                <p id="description">Has Hoiberg left?</p>
+          <div class="centered">
+                <p id="description-rumble">Has Hoiberg left?</p>
                 <p id="answer">Not yet.</p>
                 <p id="description">Still no word on if he is leaving.</p>
                 <p id="description">Thibodeau has been dismissed by the Bulls.</p>
@@ -120,18 +125,18 @@
 <script>
 function rumbleToggle(){
   if($('#rumble-toggle').html() == 'Stop Rumble'){
-      $('#rumble-element').trigger('stopRumble');
+      $('#description-rumble').trigger('stopRumble');
       $('#rumble-toggle').html('Start Rumble');
   } else{
-    $('#rumble-element').trigger('startRumble');
+    $('#description-rumble').trigger('startRumble');
     $('#rumble-toggle').html('Stop Rumble');
   }
 }
 
-  $('#rumble-element').jrumble({
+  $('#description-rumble').jrumble({
     speed: 50
   });
 
   // Start rumble on element
-  $('#rumble-element').trigger('startRumble');
+  $('#description-rumble').trigger('startRumble');
 </script>
