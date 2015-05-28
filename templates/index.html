@@ -85,15 +85,10 @@
             } 
 
         </style>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.lukej.me/jquery.jrumble/1.3/jquery.jrumble.min.js"></script>
     </head>
     <body>
         <div class="page-wrap">
-          <div>
-            <button type="button" id="rumble-toggle" onclick="rumbleToggle()">Stop Rumble</button>
-          </div>
-          <div class="centered" id="rumble-element">
+          <div class="centered">
                 <p id="description">Has Hoiberg left?</p>
                 <p id="answer">Not yet.</p>
                 <p id="description">Still no word on if he is leaving.</p>
@@ -116,22 +111,4 @@
   ga('create', 'UA-63295135-1', 'auto');
   ga('send', 'pageview');
 
-</script>
-<script>
-function rumbleToggle(){
-  if($('#rumble-toggle').html() == 'Stop Rumble'){
-      $('#rumble-element').trigger('stopRumble');
-      $('#rumble-toggle').html('Start Rumble');
-  } else{
-    $('#rumble-element').trigger('startRumble');
-    $('#rumble-toggle').html('Stop Rumble');
-  }
-}
-
-  $('#rumble-element').jrumble({
-    speed: 50
-  });
-
-  // Start rumble on element
-  $('#rumble-element').trigger('startRumble');
 </script>
