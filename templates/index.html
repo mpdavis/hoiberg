@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,22 +28,6 @@
               width: 100%;
             }
 
-            .page-wrap {
-              min-height: 100%;
-              margin-bottom: -35px; 
-            }
-
-            .page-wrap:after {
-              content: "";
-              display: block;
-            }
-            
-            .site-footer, .page-wrap:after {
-              height: 35px; 
-              text-align: right;
-              margin-right: 10px;
-            }
-
             #answer {
               text-align: center;
               font-size: 5.5em;
@@ -52,6 +37,18 @@
 
             #description {
               font-size: 3em;
+            }
+
+            #fb {
+              display: inline-block;
+              vertical-align: middle !important;
+              padding-bottom: 19px;
+            }
+
+            .header {
+              float: right;
+              margin-right: 10px;
+              margin-top: 10px;
             }
 
             a.twitter-share-button,
@@ -87,18 +84,30 @@
         </style>
     </head>
     <body>
-        <div class="page-wrap">
-          <div class="centered">
-                <p id="description">Has Hoiberg left?</p>
-                <p id="answer">Not yet.</p>
-                <p id="description">Still no word on if he is leaving.</p>
-                <p id="description">Thibodeau has been dismissed by the Bulls.</p>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=8759911484";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+        <div class="header">
+            <div id="fb">
+              <div class="fb-share-button" data-href="http://hashoibergleft.com" data-layout="button_count"></div>
             </div>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Has Hoiberg Left?  Not yet. #HoibergWatch" data-via="davis_m" data-size="large">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  
         </div>
-        <footer class="site-footer">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Has Hoiberg Left?  Not yet. #HoibergWatch" data-via="davis_m" data-size="large">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  
-        </footer>
+
+        <div class="centered">
+          <p id="description">Has Hoiberg left?</p>
+          <p id="answer">Not yet.</p>
+          <p id="description">Still no word on if he is leaving.</p>
+          <p id="description">Thibodeau has been dismissed by the Bulls.</p>
+        </div>
+
     </body>
 </html>
 
